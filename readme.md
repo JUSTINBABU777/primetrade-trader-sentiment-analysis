@@ -1,25 +1,32 @@
-# Trader Performance vs Market Sentiment
+# Trader Performance vs Market Sentiment Analysis
 
-This project analyzes how market sentiment (Fear vs Greed) relates to trader behavior and performance on the Hyperliquid platform.
+## Overview
+This project analyzes how market sentiment (Fear/Greed) relates to trader behavior and performance on Hyperliquid. The objective is to identify behavioral patterns and actionable insights that can inform risk-aware trading strategies.
 
-## Objective
-To understand whether trader performance and behavior change under different market sentiment regimes and to derive actionable insights for trading strategies.
+## Datasets
+- Bitcoin Fear & Greed Index (daily sentiment)
+- Hyperliquid historical trader data (trade-level)
 
-## Dataset
-- Bitcoin Market Sentiment (Fear/Greed Index)
-- Historical trader-level data from Hyperliquid
+## Methodology
+- Cleaned and validated raw datasets
+- Converted Unix timestamps and aggregated trade-level data to daily trader-level metrics
+- Aligned trader outcomes with daily sentiment
+- Analyzed performance differences across sentiment regimes
+- Segmented traders by activity, risk proxy, and performance consistency
 
-## Analysis Overview
-- Data cleaning and quality checks
-- Aggregation of trade-level data to daily trader metrics
-- Alignment of trader data with daily market sentiment
-- Comparative analysis of performance under Fear vs Greed
+## Key Insights
+- Fear regimes are associated with significantly higher trading activity and volatility
+- Average trade size remains stable across sentiment regimes
+- Consistent traders outperform across all sentiment conditions
+- High-activity traders drive most performance swings
+
+## Strategy Recommendations
+- Reduce excessive trading frequency during Fear regimes
+- Prioritize consistent traders over aggressive risk-taking during volatile periods
 
 ## How to Run
-1. Install dependencies:
+1. Install dependencies from `requirements.txt`
 2. Open the notebook in the `notebooks/` folder
-3. Run all cells from top to bottom
+3. Run cells from top to bottom
 
-## Output
-The notebook contains tables and visualizations comparing trader performance and behavior across sentiment regimes.
 
